@@ -2,31 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/SkyCast_Logo.png" />
+
+    <!-- 🔹 Favicon -->
+    <link rel="icon" type="image/png" href="/SkyCast_Logo.png" />
+
+    <!-- 🔹 Mobile responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🔹 Google Verification -->
     <meta name="google-site-verification" content="9pkShq0hqzpqZ2F1idb2RcGRqw1tzcQgq4E4SI_vGDI" />
+
+    <!--  SEO TITLE -->
     <title>SkyCast</title>
+
+    <!--  SEO DESCRIPTION -->
+    <meta name="description" content="SkyCast provides real-time weather updates, accurate forecasts, temperature, humidity, wind speed and air quality for cities worldwide." />
+
+    <!--  SEO KEYWORDS (optional but helpful) -->
+    <meta name="keywords" content="weather, weather forecast, skycast weather, live weather, temperature today, rain forecast, weather app" />
+
+    <!--  Author -->
+    <meta name="author" content="SkyCast Team" />
+
+    <!--  Open Graph (for WhatsApp / social sharing) -->
+    <meta property="og:title" content="SkyCast - Live Weather Forecast" />
+    <meta property="og:description" content="Get real-time weather updates and accurate forecasts for any location." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/SkyCast_Logo.png" />
+
+    <!--  Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SkyCast",
+  "url": "https://skycast-snowy.vercel.app",
+  "logo": "https://skycast-snowy.vercel.app/SkyCast_Logo.png"
+}
+</script>
+
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- SPA fix (important for React routing SEO) -->
     <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === "/") {
-        var decoded = l.search
-          .slice(1)
-          .split("&")
-          .map(function (s) {
-            return s.replace(/~and~/g, "&");
-          })
-          .join("?");
-        window.history.replaceState(
-          null,
-          null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    })(window.location);
-  </script>
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
   </body>
 </html>
