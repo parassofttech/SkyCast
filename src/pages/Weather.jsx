@@ -192,7 +192,7 @@ const Weather = () => {
       {/* --- SUNRISE / SUNSET ARC --- */}
 
       {weather && (
-        <div className="mt-12 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+        <div className="m-[12%] bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
 
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-2xl font-bold">
